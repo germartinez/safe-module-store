@@ -9,6 +9,7 @@
     "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{js,jsx,ts,tsx,json}\""
   },
   "dependencies": {
+    "@gnosis.pm/safe-contracts": "1.0.0",
     "@material-ui/core": "^4.7.0",
     "@material-ui/icons": "^4.5.1",
     "@types/classnames": "^2.2.9",
@@ -37,6 +38,8 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "reselect": "^4.0.0",
+    "truffle": "^5.1.1",
+    "truffle-contract": "4.0.31",
     "typeface-roboto": "^0.0.75",
     "typescript": "^3.7.2"
   },
