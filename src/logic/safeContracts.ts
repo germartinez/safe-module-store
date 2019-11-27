@@ -28,7 +28,7 @@ const getSafeContract = (web3: any, address?: string) => {
   return new web3.eth.Contract(GnosisSafeJson.abi, address)
 }
 
-const deployDailyLimitContract = async (web3: any) => {
+const deployDailyLimitContract = async (web3: any): Promise<any> => {
   let dailyLimitContract = getDailyLimitContract(web3)
   let deployData = {
     'data': DailyLimitJson.bytecode
@@ -59,10 +59,18 @@ export const getEnabledModulesForSafe = async (web3: any, address: string): Prom
 
 const enableModuleForSafe = async (web3: any, address: string, moduleAddress: string) => {
   let safeContract = getSafeContract(web3, address)
-  safeContract.methods.enableModule(moduleAddress).send('')
+  let from = await getDefaultAccount(web3)
+  safeContract.methods.enableModule(moduleAddress).send({from})
 }
 
 const disableModuleForSafe = async (web3: any, address: string, moduleAddress: string) => {
   let safeContract = getSafeContract(web3, address)
-  safeContract.methods.disableModule(moduleAddress).send()
+  let from = await getDefaultAccount(web3)
+  safeContract.methods.disableModule(moduleAddress).send({from})
+}
+
+const changeDailyLimit = async (web3: any, module_address: string, token_address: string, dailyLimit: number) => {
+  let dailyLimitContract = getDailyLimitContract(web3, module_address)
+  let from = await getDefaultAccount(web3)
+  dailyLimitContract.methods.changeDailyLimit(token_address, dailyLimit).send({from})
 }
