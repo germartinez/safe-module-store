@@ -22,6 +22,9 @@
     "@types/react-redux": "^7.1.5",
     "@types/react-router-dom": "^5.1.2",
     "@types/react-test-renderer": "^16.9.1",
+    "@walletconnect/browser": "^1.0.0-beta.39",
+    "@walletconnect/qrcode-modal": "^1.0.0-beta.39",
+    "@walletconnect/types": "^1.0.0-beta.39",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.6.0",
     "final-form": "^4.18.6",
@@ -42,7 +45,8 @@
     "truffle": "^5.1.1",
     "@truffle/contract": "4.1.1",
     "typeface-roboto": "^0.0.75",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "web3": "^1.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

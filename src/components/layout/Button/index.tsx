@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
+import { styles } from './styles'
 
 interface ButtonComponentProps {
   readonly children: React.ReactNode
@@ -10,7 +11,8 @@ const ButtonComponent = ({
   children,
   onClick
 }: ButtonComponentProps) => {
-  return <Button onClick={onClick} variant="contained">{children}</Button>
+  const classes = styles()
+  return <Button className={classes.button} onClick={onClick} variant="contained">{children}</Button>
 }
 
 export default ButtonComponent
