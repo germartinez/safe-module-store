@@ -1,4 +1,3 @@
-// @flow
 import DailyLimitJson from '@gnosis.pm/safe-contracts/build/contracts/DailyLimitModule.json'
 import GnosisSafeJson from '@gnosis.pm/safe-contracts/build/contracts/GnosisSafe.json'
 import ModuleManagerJson from '@gnosis.pm/safe-contracts/build/contracts/ModuleManager.json'
@@ -13,7 +12,6 @@ const rinkebyAllowanceModuleAddress = '0x0E61D0df5F58f35972Eb46F2008C270f5c36C3C
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 export const SENTINEL_ADDRESS = '0x0000000000000000000000000000000000000001'
-
 
 interface ModuleInfo{
     address: string

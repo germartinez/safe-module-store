@@ -4,7 +4,7 @@ import Page from 'components/Page'
 const Welcome = () => {
   return (
     <Page>
-      Safe module store body
+hola
     </Page>
   )
 }
